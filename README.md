@@ -1,91 +1,68 @@
 # 🚀 AI Object Detection System
 
-An end-to-end AI-powered Object Detection System built using **YOLOv11**, **FastAPI**, **React.js**, and **OpenCV**. The application performs real-time object detection using a webcam and processes uploaded videos with high-speed YOLO inference.
+An end-to-end AI-powered **Object Detection System** built using **YOLOv11**, **FastAPI**, **React.js**, and **OpenCV**.
 
-![Python](https://img.shields.io/badge/Python-3.12-blue?logo=python)
-![FastAPI](https://img.shields.io/badge/FastAPI-Backend-009688?logo=fastapi)
-![React](https://img.shields.io/badge/React-Frontend-61DAFB?logo=react)
-![YOLO](https://img.shields.io/badge/YOLO-Ultralytics-red)
-![OpenCV](https://img.shields.io/badge/OpenCV-Computer%20Vision-green)
-![License](https://img.shields.io/badge/License-MIT-yellow)
+The application supports:
 
----
-
-# 📌 Overview
-
-This project demonstrates a complete AI-powered web application capable of detecting multiple objects in:
-
-- 📷 Live Camera Stream
-- 🎥 Uploaded Video Files
-
-The frontend is developed using **React.js**, while the backend is built with **FastAPI**. The object detection pipeline uses the **Ultralytics YOLOv11** model for fast and accurate inference.
+- 📷 Real-time Live Camera Detection
+- 🎥 Upload and Detect Objects in Videos
+- ⚡ High-speed YOLOv11 Inference
+- 📦 REST API with FastAPI
+- 🖥️ Modern React Frontend
 
 ---
 
-# ✨ Features
+## 🖼️ Project Preview
 
-## 🎥 Live Camera Detection
+### 🏠 Home Page
 
-- Real-time webcam object detection
-- Continuous frame processing
-- High-speed YOLO inference
+![Home Page](home-page.png)
+
+---
+
+## ✨ Features
+
+### 📷 Live Camera Detection
+
+- Real-time webcam streaming
+- Multiple object detection
 - Bounding boxes
 - Class labels
 - Confidence scores
+- Fast YOLOv11 inference
 
----
-
-## 📁 Video Upload Detection
+### 🎥 Video Upload Detection
 
 - Upload MP4 videos
-- Frame-by-frame processing
-- Automatic object detection
+- Frame-by-frame detection
+- Processed video preview
 - Download processed video
-- Browser-compatible output
 
----
-
-## ⚡ FastAPI Backend
+### ⚡ FastAPI Backend
 
 - REST API
 - Swagger UI
 - Modular architecture
 - Video processing service
-- Camera frame API
+- Camera frame endpoint
 
----
-
-## 🧠 AI Model
+### 🧠 AI Model
 
 - YOLOv11 Nano
 - Ultralytics
-- Multiple object detection
+- OpenCV
 - Real-time inference
 
 ---
 
-# 🏗️ Tech Stack
+# 🛠 Tech Stack
 
-## Frontend
-
-- React.js
-- JavaScript
-- HTML5
-- CSS3
-- Material UI
-
-## Backend
-
-- FastAPI
-- Python
-- Uvicorn
-- OpenCV
-- NumPy
-
-## AI
-
-- YOLOv11
-- Ultralytics
+| Frontend | Backend | AI |
+|----------|---------|----|
+| React.js | FastAPI | YOLOv11 |
+| HTML5 | Python | Ultralytics |
+| CSS3 | OpenCV | NumPy |
+| JavaScript | Uvicorn | |
 
 ---
 
@@ -96,27 +73,59 @@ AI-Object-Detection-System
 │
 ├── backend
 │   ├── app
-│   │   ├── api
-│   │   ├── services
-│   │   ├── models
-│   │   ├── utils
-│   │   ├── config
-│   │   └── main.py
-│   │
 │   ├── weights
 │   ├── temp
 │   ├── run.py
 │   └── requirements.txt
 │
 ├── frontend
-│   ├── public
-│   ├── src
-│   └── package.json
 │
-├── docker-compose.yml
 ├── README.md
+├── docker-compose.yml
 └── .gitignore
 ```
+
+---
+
+# 📷 Application Screenshots
+
+## 🔹 Swagger API
+
+Interactive FastAPI documentation.
+
+![Swagger UI](swagger-ui.png)
+
+---
+
+## 🔹 Live Camera Detection
+
+Start the webcam and perform real-time object detection.
+
+![Live Camera](live-camera-detection.png)
+
+---
+
+## 🔹 Upload Video
+
+Upload an MP4 video for object detection.
+
+![Upload Video](upload-video-page1.png)
+
+---
+
+## 🔹 Detection Result
+
+Detected objects are highlighted with bounding boxes and confidence scores.
+
+![Detection Result](upload-video-result.png)
+
+---
+
+## 🔹 Processed Video Output
+
+Watch the processed output directly inside the application.
+
+![Output Video](upload-video-rest.png)
 
 ---
 
@@ -125,7 +134,7 @@ AI-Object-Detection-System
 ## Clone Repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/AI-Object-Detection-System.git
+git clone https://github.com/Siddharth3007Git/AI-Object-Detection-System.git
 ```
 
 ```bash
@@ -146,8 +155,6 @@ Create Virtual Environment
 python -m venv venv
 ```
 
-Activate
-
 ### Windows
 
 ```bash
@@ -160,7 +167,7 @@ venv\Scripts\activate
 source venv/bin/activate
 ```
 
-Install Packages
+Install dependencies
 
 ```bash
 pip install -r requirements.txt
@@ -172,13 +179,13 @@ Run Backend
 python run.py
 ```
 
-Backend URL
+Backend
 
 ```
 http://localhost:8000
 ```
 
-Swagger Documentation
+Swagger
 
 ```
 http://localhost:8000/docs
@@ -192,7 +199,7 @@ http://localhost:8000/docs
 cd frontend
 ```
 
-Install Packages
+Install dependencies
 
 ```bash
 npm install
@@ -204,7 +211,7 @@ Run
 npm start
 ```
 
-Frontend URL
+Frontend
 
 ```
 http://localhost:3000
@@ -214,120 +221,51 @@ http://localhost:3000
 
 # 📡 API Endpoints
 
-## Health Check
-
-```
-GET /health
-```
-
----
-
-## Live Camera Detection
-
-```
-POST /api/v1/detect/frame
-```
-
----
-
-## Video Detection
-
-```
-POST /api/v1/detect/video
-```
-
----
-
-# 🖼️ Screenshots
-
-## Home Page
-
-> Add Screenshot Here
-
----
-
-## Live Camera Detection
-
-> Add Screenshot Here
-
----
-
-## Video Detection
-
-> Add Screenshot Here
-
----
-
-## Output Video
-
-> Add Screenshot Here
-
----
-
-# 🎬 Demo
-
-Add a GIF or YouTube Demo here.
-
-Example:
-
-```
-https://youtu.be/your-demo-video
-```
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET | `/health` | Health Check |
+| POST | `/api/v1/detect/frame` | Live Camera Detection |
+| POST | `/api/v1/detect/video` | Video Detection |
 
 ---
 
 # 🚀 Future Improvements
 
-- Image Upload Detection
-- Object Tracking (ByteTrack / DeepSORT)
+- Image Detection
+- Object Tracking (ByteTrack)
+- DeepSORT Integration
 - Custom YOLO Training
+- Docker Deployment
 - GPU Acceleration
 - AWS Deployment
-- Docker Deployment
 - User Authentication
 - Detection History
 - Analytics Dashboard
 
 ---
 
-# 🤝 Contributing
-
-Contributions are welcome.
-
-1. Fork the repository
-2. Create a new branch
-
-```bash
-git checkout -b feature-name
-```
-
-3. Commit changes
-
-```bash
-git commit -m "Added new feature"
-```
-
-4. Push
-
-```bash
-git push origin feature-name
-```
-
-5. Open a Pull Request
-
----
-
 # 👨‍💻 Author
 
-**Siddharth Jagadale**
+## Siddharth Jagadale
 
-- GitHub: https://github.com/Siddharth3007Git
-- LinkedIn: *(Add your LinkedIn profile URL)*
+**GitHub**
+
+https://github.com/Siddharth3007Git
+
+**LinkedIn**
+
+https://www.linkedin.com/in/siddharth-jagadale
 
 ---
 
 # ⭐ Support
 
-If you found this project helpful, please give it a ⭐ on GitHub.
+If you found this project helpful, please consider giving it a **⭐ Star** on GitHub.
 
-It helps others discover the project and motivates future improvements.
+It motivates future development and helps others discover the project.
+
+---
+
+## 📜 License
+
+This project is licensed under the **MIT License**.
