@@ -1,157 +1,152 @@
-# 🚀 AI Object Detection System using YOLO, FastAPI & React
+# 🚀 AI Object Detection System
 
-An end-to-end **AI-powered Object Detection System** built using **YOLO (Ultralytics), FastAPI, React, and OpenCV**. The application can detect multiple objects in **real-time through a webcam** as well as **uploaded video files**, providing an intuitive web interface for interacting with a state-of-the-art computer vision model.
+An end-to-end AI-powered Object Detection System built using **YOLOv11**, **FastAPI**, **React.js**, and **OpenCV**. The application performs real-time object detection using a webcam and processes uploaded videos with high-speed YOLO inference.
+
+![Python](https://img.shields.io/badge/Python-3.12-blue?logo=python)
+![FastAPI](https://img.shields.io/badge/FastAPI-Backend-009688?logo=fastapi)
+![React](https://img.shields.io/badge/React-Frontend-61DAFB?logo=react)
+![YOLO](https://img.shields.io/badge/YOLO-Ultralytics-red)
+![OpenCV](https://img.shields.io/badge/OpenCV-Computer%20Vision-green)
+![License](https://img.shields.io/badge/License-MIT-yellow)
 
 ---
 
-# 📖 Project Overview
+# 📌 Overview
 
-Object detection is one of the most widely used applications of Computer Vision, enabling machines to identify and locate multiple objects within an image or video.
+This project demonstrates a complete AI-powered web application capable of detecting multiple objects in:
 
-This project demonstrates a complete full-stack AI application where:
+- 📷 Live Camera Stream
+- 🎥 Uploaded Video Files
 
-* A **React** frontend provides an interactive user interface.
-* A **FastAPI** backend exposes REST APIs for AI inference.
-* A **YOLO (Ultralytics)** model performs high-speed object detection.
-* **OpenCV** processes images and videos frame by frame.
-* The processed output is returned with bounding boxes, labels, and confidence scores.
-
-The application supports both **real-time webcam detection** and **video upload detection**, making it suitable for learning, demonstrations, and further AI application development.
+The frontend is developed using **React.js**, while the backend is built with **FastAPI**. The object detection pipeline uses the **Ultralytics YOLOv11** model for fast and accurate inference.
 
 ---
 
 # ✨ Features
 
-## 🎥 Live Camera Object Detection
+## 🎥 Live Camera Detection
 
-* Real-time object detection using your webcam
-* Continuous frame capture from the browser
-* Fast AI inference using YOLO
-* Bounding boxes with class labels
-* Confidence score visualization
-* Smooth live detection experience
+- Real-time webcam object detection
+- Continuous frame processing
+- High-speed YOLO inference
+- Bounding boxes
+- Class labels
+- Confidence scores
 
 ---
 
 ## 📁 Video Upload Detection
 
-* Upload any supported video file
-* Frame-by-frame object detection
-* Automatic video processing
-* Generates an annotated output video
-* Displays detected objects with bounding boxes and labels
+- Upload MP4 videos
+- Frame-by-frame processing
+- Automatic object detection
+- Download processed video
+- Browser-compatible output
 
 ---
 
-## 🧠 AI-Powered Detection
+## ⚡ FastAPI Backend
 
-* YOLO (Ultralytics) object detection model
-* Detects multiple objects simultaneously
-* High-speed inference
-* Accurate object localization
-* Supports a wide range of object classes from the pretrained model
-
----
-
-# 🏗️ System Architecture
-
-```text
-                React Frontend
-                      │
-          Upload Video / Webcam
-                      │
-                      ▼
-                FastAPI Backend
-                      │
-                      ▼
-             OpenCV Frame Processing
-                      │
-                      ▼
-          YOLO (Ultralytics) Model
-                      │
-                      ▼
-      Bounding Boxes + Labels + Confidence
-                      │
-                      ▼
-          Annotated Output to Frontend
-```
+- REST API
+- Swagger UI
+- Modular architecture
+- Video processing service
+- Camera frame API
 
 ---
 
-# 🛠️ Technology Stack
+## 🧠 AI Model
+
+- YOLOv11 Nano
+- Ultralytics
+- Multiple object detection
+- Real-time inference
+
+---
+
+# 🏗️ Tech Stack
 
 ## Frontend
 
-* React
-* Material UI
-* JavaScript
-* HTML5
-* CSS3
+- React.js
+- JavaScript
+- HTML5
+- CSS3
+- Material UI
 
 ## Backend
 
-* Python
-* FastAPI
-* OpenCV
-* NumPy
-* Uvicorn
+- FastAPI
+- Python
+- Uvicorn
+- OpenCV
+- NumPy
 
-## AI / Computer Vision
+## AI
 
-* YOLO (Ultralytics)
-* Deep Learning
-* Computer Vision
+- YOLOv11
+- Ultralytics
 
 ---
 
 # 📂 Project Structure
 
 ```text
-object-detection/
+AI-Object-Detection-System
 │
-├── backend/
-│   ├── main.py
-│   ├── requirements.txt
-│   └── ...
+├── backend
+│   ├── app
+│   │   ├── api
+│   │   ├── services
+│   │   ├── models
+│   │   ├── utils
+│   │   ├── config
+│   │   └── main.py
+│   │
+│   ├── weights
+│   ├── temp
+│   ├── run.py
+│   └── requirements.txt
 │
-├── frontend/
-│   ├── src/
-│   ├── public/
-│   └── ...
+├── frontend
+│   ├── public
+│   ├── src
+│   └── package.json
 │
+├── docker-compose.yml
 ├── README.md
-└── ...
+└── .gitignore
 ```
 
 ---
 
-# ⚙️ Installation & Setup
+# ⚙️ Installation
 
-## 1. Clone the Repository
+## Clone Repository
 
 ```bash
-git clone https://github.com/MandeepKharb/object-detection.git
+git clone https://github.com/YOUR_USERNAME/AI-Object-Detection-System.git
+```
 
-cd object-detection
+```bash
+cd AI-Object-Detection-System
 ```
 
 ---
 
-## 2. Backend Setup
-
-Navigate to the backend directory:
+# 🔧 Backend Setup
 
 ```bash
 cd backend
 ```
 
-Create a virtual environment:
+Create Virtual Environment
 
 ```bash
 python -m venv venv
 ```
 
-Activate the virtual environment.
+Activate
 
 ### Windows
 
@@ -159,136 +154,180 @@ Activate the virtual environment.
 venv\Scripts\activate
 ```
 
-### macOS / Linux
+### Linux/macOS
 
 ```bash
 source venv/bin/activate
 ```
 
-Install the required dependencies:
+Install Packages
 
 ```bash
 pip install -r requirements.txt
 ```
 
-Start the FastAPI server:
+Run Backend
 
 ```bash
-uvicorn main:app --reload
+python run.py
 ```
 
-Backend URL:
+Backend URL
 
-```text
+```
 http://localhost:8000
 ```
 
-Swagger API Documentation:
+Swagger Documentation
 
-```text
+```
 http://localhost:8000/docs
 ```
 
 ---
 
-## 3. Frontend Setup
-
-Open another terminal.
-
-Navigate to the frontend folder:
+# 💻 Frontend Setup
 
 ```bash
 cd frontend
 ```
 
-Install dependencies:
+Install Packages
 
 ```bash
 npm install
 ```
 
-Start the React application:
+Run
 
 ```bash
 npm start
 ```
 
-Frontend URL:
+Frontend URL
 
-```text
+```
 http://localhost:3000
 ```
 
 ---
 
-# 🚀 How to Use
+# 📡 API Endpoints
 
-### Live Camera Detection
+## Health Check
 
-1. Launch the application.
-2. Allow browser access to your webcam.
-3. Start live detection.
-4. Watch objects being detected in real time.
-
----
-
-### Video Upload Detection
-
-1. Select the **Upload Video** option.
-2. Choose a supported video file.
-3. Upload the video.
-4. Wait for processing.
-5. View the generated video with detected objects highlighted using bounding boxes.
+```
+GET /health
+```
 
 ---
 
-# 🎬 Project Demonstration
+## Live Camera Detection
 
-Watch the complete project walkthrough on YouTube:
-
-**https://youtu.be/278nPWZNpzY?si=aa3asagH6g1MGq-K**
-
----
-
-# 📸 Screenshots
-
-You can add screenshots such as:
-
-* Home Screen
-* Live Camera Detection
-* Video Upload Interface
-* Detection Results
-* Processed Video Output
+```
+POST /api/v1/detect/frame
+```
 
 ---
 
-# 🔮 Future Enhancements
+## Video Detection
 
-* Custom YOLO model training
-* Support for image uploads
-* Object tracking (ByteTrack / DeepSORT)
-* Real-time video streaming support
-* Docker deployment
-* GPU acceleration
-* Cloud deployment (AWS, Azure, GCP)
-* Detection analytics dashboard
+```
+POST /api/v1/detect/video
+```
 
 ---
 
-# 🤝 Contributions
+# 🖼️ Screenshots
 
-Contributions, feature requests, and suggestions are welcome. Feel free to fork the repository and submit a Pull Request.
+## Home Page
+
+> Add Screenshot Here
+
+---
+
+## Live Camera Detection
+
+> Add Screenshot Here
+
+---
+
+## Video Detection
+
+> Add Screenshot Here
+
+---
+
+## Output Video
+
+> Add Screenshot Here
+
+---
+
+# 🎬 Demo
+
+Add a GIF or YouTube Demo here.
+
+Example:
+
+```
+https://youtu.be/your-demo-video
+```
+
+---
+
+# 🚀 Future Improvements
+
+- Image Upload Detection
+- Object Tracking (ByteTrack / DeepSORT)
+- Custom YOLO Training
+- GPU Acceleration
+- AWS Deployment
+- Docker Deployment
+- User Authentication
+- Detection History
+- Analytics Dashboard
+
+---
+
+# 🤝 Contributing
+
+Contributions are welcome.
+
+1. Fork the repository
+2. Create a new branch
+
+```bash
+git checkout -b feature-name
+```
+
+3. Commit changes
+
+```bash
+git commit -m "Added new feature"
+```
+
+4. Push
+
+```bash
+git push origin feature-name
+```
+
+5. Open a Pull Request
 
 ---
 
 # 👨‍💻 Author
 
-**Mandeep Kharb**
+**Siddharth Jagadale**
 
-If you found this project helpful, consider giving it a ⭐ on GitHub.
+- GitHub: https://github.com/Siddharth3007Git
+- LinkedIn: *(Add your LinkedIn profile URL)*
 
 ---
 
-# 📄 License
+# ⭐ Support
 
-This project is intended for educational and learning purposes.
+If you found this project helpful, please give it a ⭐ on GitHub.
+
+It helps others discover the project and motivates future improvements.
